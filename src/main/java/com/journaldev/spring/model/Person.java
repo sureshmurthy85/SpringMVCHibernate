@@ -1,3 +1,12 @@
+
+// Person.java --
+//
+// Person.java is part of ElectricCommander.
+//
+// Copyright (c) 2005-2016 Electric Cloud, Inc.
+// All rights reserved.
+//
+
 package com.journaldev.spring.model;
 
 import javax.persistence.Column;
@@ -8,50 +17,57 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Entity bean with JPA annotations
- * Hibernate provides JPA implementation
- * @author pankaj
+ * Entity bean with JPA annotations Hibernate provides JPA implementation.
  *
+ * @author  pankaj
  */
 @Entity
-@Table(name="PERSON")
-public class Person {
+@Table(name = "PERSON")
+public class Person
+{
 
-	@Id
-	@Column(name="id")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
-	
-	private String name;
-	
-	private String country;
+    //~ Instance fields --------------------------------------------------------
 
-	public int getId() {
-		return id;
-	}
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id private int id;
+    private String  name;
+    private String  country;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    //~ Methods ----------------------------------------------------------------
 
-	public String getName() {
-		return name;
-	}
+    @Override public String toString()
+    {
+        return "id=" + id + ", name=" + name + ", country=" + country;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getCountry()
+    {
+        return country;
+    }
 
-	public String getCountry() {
-		return country;
-	}
+    public int getId()
+    {
+        return id;
+    }
 
-	public void setCountry(String country) {
-		this.country = country;
-	}
-	
-	@Override
-	public String toString(){
-		return "id="+id+", name="+name+", country="+country;
-	}
+    public String getName()
+    {
+        return name;
+    }
+
+    public void setCountry(String country)
+    {
+        this.country = country;
+    }
+
+    public void setId(int id)
+    {
+        this.id = id;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
 }
