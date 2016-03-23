@@ -7,7 +7,7 @@
 // All rights reserved.
 //
 
-package com.journaldev.spring.model;
+package com.demo.spring.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,8 +18,6 @@ import javax.persistence.Table;
 
 /**
  * Entity bean with JPA annotations Hibernate provides JPA implementation.
- *
- * @author  pankaj
  */
 @Entity
 @Table(name = "PERSON")

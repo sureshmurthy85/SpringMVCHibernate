@@ -7,7 +7,7 @@
 // All rights reserved.
 //
 
-package com.journaldev.spring.dao;
+package com.demo.spring.dao;
 
 import java.util.List;
 
@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
 
 import org.springframework.stereotype.Repository;
 
-import com.journaldev.spring.model.Person;
+import com.demo.spring.model.Person;
 
 @Repository public class PersonDAOImpl
     implements PersonDAO
