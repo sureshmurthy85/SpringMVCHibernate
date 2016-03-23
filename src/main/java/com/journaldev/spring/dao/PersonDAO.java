@@ -18,13 +18,13 @@ public interface PersonDAO
 
     //~ Methods ----------------------------------------------------------------
 
+    void addPerson(Person p);
+
     List<Person> listPersons();
 
     void removePerson(int id);
 
     void updatePerson(Person p);
-
-    void addPerson(Person p);
 
     Person getPersonById(int id);
 }
