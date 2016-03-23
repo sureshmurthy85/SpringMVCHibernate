@@ -75,6 +75,17 @@ import com.demo.spring.service.PersonService;
         return "person";
     }
 
+    @RequestMapping(
+        value  = "/",
+        method = RequestMethod.GET
+    )
+    public String printWelcome(Model model)
+    {
+        model.addAttribute("message", "Spring 3 MVC Hello World");
+
+        return "hello";
+    }
+
     @RequestMapping("/remove/{id}")
     public String removePerson(@PathVariable("id") int id)
     {
