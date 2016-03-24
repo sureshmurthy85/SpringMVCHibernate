@@ -21,7 +21,7 @@ import com.demo.spring.model.Person;
 import static junit.framework.Assert.assertEquals;
 
 @ContextConfiguration(
-    locations = {"classpath*:/WEB-INF/appServlet/servler-context.xml"}
+    locations = {"classpath*:/WEB-INF/appServlet/servlet-context.xml"}
 )
 @RunWith(SpringJUnit4ClassRunner.class)
 public class PersonDAOImplTest

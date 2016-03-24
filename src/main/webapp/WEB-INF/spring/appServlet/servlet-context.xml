@@ -26,11 +26,10 @@
 	</beans:bean>
 
     <!-- Datasource configuration -->
-	<beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
-		destroy-method="close">
+	<beans:bean id="dataSource"
+		  class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<beans:property name="url"
-			value="jdbc:mysql://localhost:3306/demo" />
+		<beans:property name="url" value="jdbc:mysql://localhost:3306/demo" />
 		<beans:property name="username" value="root" />
 		<beans:property name="password" value="root" />
 	</beans:bean>
