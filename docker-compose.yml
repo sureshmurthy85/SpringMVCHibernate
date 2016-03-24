@@ -8,9 +8,10 @@ mysql-server:
     - 3306:3306
     environment:
     - MYSQL_ROOT_PASSWORD=root
+
 jetty-server:
     container_name: jetty-server
-    image: jetty 
+    image: jetty
     volumes:
     - ${PWD}/target:/var/lib/jetty/webapps 
     ports:
